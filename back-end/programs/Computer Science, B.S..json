@@ -1,0 +1,82 @@
+{
+    "University Requirements": {
+        "Completion of Minimum University Requirements for an Undergraduate Baccalaureate Degree.": [
+            "Minimum 120 credits and minimum GPA of 2.0", 
+            "Completion of 45 upper-level credits, residence requirement, Writing Intensive requirement, and General Education requirement"]
+    },
+    "Major Requirements": [
+        "Minimum 77 credits", 
+        "Minimum grade of 'C' in courses applied to the major, except where otherwise indicated", 
+        "Students may complete one major or minor in Computer Science and Electrical Engineering ", 
+        "Completion of a minimum of one of the following tracks: Computer Science, B.S., Artificial Intelligence and Machine Learning Track, Computer Science, B.S., Data Science Track, Computer Science, B.S., Game Development Track, Computer Science, B.S., Cybersecurity Track. Students who complete more than one track complete a minimum of two unique courses in each track."],
+    "Computer Science Gateway (8 credits)": {
+        "Complete the following with minimum grade of 'B':": [
+            "CMSC 201 - Computer Science I (4)", 
+            "CMSC 202 - Computer Science II (4)"]
+    },
+    "Required Computer Science Courses (27 credits)": {
+        "Complete the following:": [
+            "CMSC 203 - Discrete Structures (3)", 
+            "CMSC 304 - Social and Ethical Issues in Information Technology (3)", 
+            "CMSC 313 - Computer Organization and Assembly Language Programming (3)", 
+            "CMSC 331 - Principles of Programming Language (3)", 
+            "CMSC 341 - Data Structures (3)", 
+            "CMSC 411 - Computer Architecture (3)", 
+            "CMSC 421 - Principles of Operating Systems (3)", 
+            "CMSC 441 - Design and Analysis of Algorithms. (3)", 
+            "CMSC 447 - Software Engineering I (3)"]
+    },
+    "Required Mathematics Courses (11 credits)": {
+        "Complete the following:": [
+            "MATH 151 - Calculus and Analytic Geometry I (4)", 
+            "MATH 152 - Calculus and Analytic Geometry II (4)", 
+            "MATH 221 - Introduction to Linear Algebra (3)"]
+    },
+    "Required Statistics Courses (4 credits)": {
+        "Complete one of the following:": [
+            "STAT 355 - Introduction to Probability and Statistics for Scientists and Engineers (4)", 
+            "STAT 451 - Introduction to Probability Theory (3)"]
+    },
+    "Required Science Courses (10-12 credits)": {
+        "Complete one of the following two-course sequences:": [
+            "BIOL 141 - Foundations of Biology: Cells, Energy and Organisms (4)", 
+            "and BIOL 142 - Foundations of Biology: Ecology and Evolution (4) ", 
+            "CHEM 101 - Principles of Chemistry I (4)", 
+            "and CHEM 102 - Principles of Chemistry II (4) ", 
+            "PHYS 121 - Introductory Physics I (4)", 
+            "and PHYS 122 - Introductory Physics II (4) "]
+    },
+    "Lab Science": {
+        "Complete one of the following:": [
+            "CHEM 102L - Introductory Chemistry Lab I (2)", 
+            "GES 286 - Exploring the Environment: A Geo-Spatial Perspective (4)", 
+            "PHYS 122L - Introductory Physics Laboratory (3)", 
+            "SCI 101L - Quantitative Reasoning: Measurement and Skills Lab (2)"]
+    },
+    "Computer Science Electives (6 credits)": {
+        "Complete a minimum of 6 credits of the following:": [
+            "CMSC 426 - Principles of Computer Security (3)", 
+            "CMSC 431 - Compiler Design Principles (3)", 
+            "CMSC 435 - Computer Graphics (3)", 
+            "CMSC 448 - Software Engineering II (3)", 
+            "CMSC 451 - Automata Theory and Formal Languages (3)",
+            "CMSC 455 - Numerical Computations (3)", 
+            "CMSC 456 - Symbolic Computation (3)", 
+            "CMSC 461 - Database Management Systems (3)", 
+            "CMSC 471 - Introduction to Artificial Intelligence (3)", 
+            "CMSC 481 - Computer Networks (3)", 
+            "CMSC 483 - Parallel and Distributed Processing (3)"]
+    },
+    "Technical Electives (9 credits)": {
+        "Complete 9 credits from 400-level CMSC courses excluding CMSC 404, CMSC 495, CMSC 498, and CMSC 499, computer engineering courses as approved, or a maximum of two of the following courses:": [
+            "MATH 430 - Matrix Analysis (3)", 
+            "MATH 441 - Introduction to Numerical Analysis (3)", 
+            "MATH 452 - Introduction to Stochastic Processes (3)", 
+            "MATH 475 - Combinatorics and Graph Theory (3)", 
+            "MATH 481 - Mathematical Modeling (3)", 
+            "MATH 483 - Linear and Combinatorial Optimization (3)"]
+    },
+    "Computer Science Track (12-19 credits)": "Complete a minimum of one of the following tracks: Computer Science, B.S., Artificial Intelligence and Machine Learning Track, Computer Science, B.S., Cybersecurity Track, Computer Science, B.S., Data Science Track, Computer Science, B.S., Game Development Track Students who complete more than one track complete a minimum of two unique courses in each track.",
+    "Laptop Requirement": "Computer Science and Electrical Engineering requires all incoming freshmen and incoming transfer students to have a laptop computer.\n\nA link to the computer science program's technology requirements shall be available on the following website:\nhttps://www.csee.umbc.edu/undergraduate/computer-science-bs/",
+    "Accelerated Bachelor's/Master's Programs": "Qualified students may apply to an accelerated program, which allows them to share courses between a bachelor's degree and a master's degree. Students take graduate courses as undergraduate students and later apply those courses to master's degrees. An undergraduate may apply to participate in an accelerated program even if the desired graduate program is in a department other than the one in which the student is majoring. More information is available from the Graduate School website: https://gradschool.umbc.edu/admissions/nontraditional/accelerated/"
+}

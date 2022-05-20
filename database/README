@@ -1,0 +1,28 @@
+To build:
+    docker build -t [NAME] ./
+
+to list:
+    running processes:
+        docker ps
+    view images: 
+        docker image ls
+    view containers:
+        docker container ls
+
+To run:
+    no existing container:
+        docker run -d --name [container name] -p 5431:5432 [image name]
+    existing container:
+        docker start [container name]
+
+To open a shell:
+    docker exec -it [container] /bin/bash
+
+To access postgres itself:
+    open a shell
+    psql -h 127.0.0.1 -p 5432 -U postgres
+    
+
+Some useful PSQL commands:
+    expanded view:
+        \x
