@@ -138,7 +138,7 @@ const SemesterTable = (props: Props) => {
 									{
 									coursesOrder.map((course, index) => {
 											return(							
-											<Draggable key={index} draggableId={course.id.toString()} index = {index}>
+											<Draggable key={index} draggableId={course.class_code + index.toString()} index = {index}>
 											{(provided, snapshot) => (
 													<tr 
 													className="row" 
