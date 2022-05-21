@@ -50,6 +50,7 @@ module.exports = {
 			await queryInterface.bulkInsert('Courses', [{
 				course_id: new_course['Course ID'],
 				code: new_course.Course,
+				code_number: new_course.Course.split(" ")[1],
 				name: new_course.Name,
 				credits: parseInt(new_course.Credits),
 				description: new_course.Description,

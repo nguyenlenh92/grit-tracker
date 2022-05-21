@@ -87,7 +87,11 @@ export default class ProfileController {
                         username: req.params.username,
                     },
                     attributes: ['semester', 'year'],
-                    group: ['semester', 'year']
+                    group: ['semester', 'year'],
+                    order: [
+                        ['year', 'ASC'],
+                        [sequelize.literal(`CASE semester WHEN 'Spring' THEN 1 WHEN 'Summer' THEN 2 WHEN 'Fall' THEN 3 WHEN 'Winter' THEN 4 ELSE 0 END`), 'ASC'],
+                    ]
                 })
             });
         } catch (error) {

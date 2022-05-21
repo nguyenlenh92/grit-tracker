@@ -37,11 +37,12 @@ function CourseSearchBar({propsStyle}: Props) {
             direction="row"
             >
                 <Autocomplete 
-                    data={data}
+                    data={autocompleteState ? data : []}
                     limit={5}
                     nothingFound="No course was found"
                     defaultValue=""
                     value={autocompleteState}
+                    
                     
                     onChange={(value) => {
                         setAutocompleteState(value)

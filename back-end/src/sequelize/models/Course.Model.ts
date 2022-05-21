@@ -7,6 +7,10 @@ export const CourseDAO = sequelize.define('Course', {
         allowNull: false,
         primaryKey: true
     },
+    code_number: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
     course_id: {
         type: DataTypes.STRING,
     },

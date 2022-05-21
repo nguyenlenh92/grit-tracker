@@ -11,7 +11,7 @@ export default class CourseController {
         try {
             res.status(200).send({
                 message: await CourseDAO.findAll({
-                    order: [['code', 'ASC']]
+                    order: [['code', 'ASC'], ['code_number', 'ASC']]
                 })
             })
   

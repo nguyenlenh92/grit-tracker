@@ -17,9 +17,9 @@ const Requirements = (props: Props) => {
                     var newRequirements: RequirementType[] = []
                     for (const requirement of data) {
                         newRequirements.push({
-                            name: requirement.name,
+                            name: requirement.Requirement.name,
                             satisfies: requirement.satisfies,
-                            satisfy_condition: requirement.satisfy_condition
+                            satisfy_condition: requirement.Requirement.satisfy_condition
                         })
                     }
                     setRequirements(newRequirements)

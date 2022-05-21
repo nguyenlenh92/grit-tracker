@@ -7,6 +7,10 @@ module.exports = {
 				allowNull: false,
 				primaryKey: true
 			},
+			code_number: {
+				allowNull: false,
+				type: Sequelize.DataTypes.STRING
+			},
 			course_id: {
 				type: Sequelize.DataTypes.STRING,
 			},

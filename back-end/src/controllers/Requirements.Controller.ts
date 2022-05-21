@@ -96,22 +96,23 @@ export default class RequirementController {
             res.status(200).send({
 
                 // SECOND SELECT JOIN STATEMENT IN WHICH WE JOIN SATISFIESREQUIREMENTS WITH REQUIREMENTS USING FOREIGNKEY REQUIREMENT
-                message: await sequelize.query(
-                    `SELECT "SatisfiesRequirements".requirement, satisfies, name, satisfy_condition \
-                    FROM "SatisfiesRequirements" JOIN "Requirements" ON "SatisfiesRequirements".requirement="Requirements".requirement \
-                    WHERE "SatisfiesRequirements".username='${req.params.username}'`, { type: 'SELECT'})
+                // message: await sequelize.query(
+                //     `SELECT "SatisfiesRequirements".requirement, satisfies, name, satisfy_condition \
+                //     FROM "SatisfiesRequirements" JOIN "Requirements" ON "SatisfiesRequirements".requirement="Requirements".requirement \
+                //     WHERE "SatisfiesRequirements".username='${req.params.username}'`, { type: 'SELECT'})
                 
                 // JOIN DONE USING SEQUELIZE ORM
-                    // message: await SatisfiesRequirementDAO.findAll({
-                //     include: {
-                //         model: RequirementDAO,
-                //         attributes: ['name', 'satisfy_condition']
-                //     },
-                //     where: {
-                //         username: req.params.username
-                //     },
-                //     attributes: ['requirement', 'satisfies']
-                // })
+                    message: await SatisfiesRequirementDAO.findAll({
+                    include: {
+                        model: RequirementDAO,
+                        attributes: ['name', 'satisfy_condition'],
+                    },
+                    where: {
+                        username: req.params.username
+                    },
+                    attributes: ['requirement', 'satisfies'],
+                    order: [['satisfies', 'DESC']],
+                })
             })
 
         } catch (error) {
