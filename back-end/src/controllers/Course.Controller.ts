@@ -50,7 +50,8 @@ export default class CourseController {
                         code: {
                             [Op.like]: `%${req.params.major}%`
                         }
-                    }
+                    },
+                    order: [['code', 'ASC'], ['code_number', 'ASC']]
                 })
             })          
         } catch (error) {
