@@ -51,7 +51,7 @@ const SemesterGroup = (props: Props) => {
 
 	useEffect(() => {
 		if (window.localStorage.getItem('username')){
-		axios.get(`profile/unique-semester/${window.localStorage.getItem('username')}`)
+		axios.get(`profile/${window.localStorage.getItem('username')}/unique-semester`)
 		.then((res) => {
 			const data = res.data.message
 
@@ -71,7 +71,7 @@ const SemesterGroup = (props: Props) => {
 						const newCourse = {
 							id: index,
 							class_code: course.code,
-							class_name: course.name,
+							class_name: course.Course.name,
 							notes: course.notes,
 							grade: course.grade,
 						}
@@ -95,7 +95,7 @@ const SemesterGroup = (props: Props) => {
 				})
 		})
 		}
-	}, [semesterData])
+	}, [])
 
 	const handleCreateNewSemester = () => {
 		var new_year = year

@@ -19,25 +19,30 @@ const Profile = (props: Props) => {
     const [errorMsg, setErrorMsg] = useState(false)
     const [username, setUsername] = useState(window.localStorage.getItem('username') || '')
     const [degree, setDegree] = useState('')
+    const [degreeType, setDegreeType] = useState("")
 
     useEffect(() => {
         axios.get(`/user/${username}`)
         .then((res) => {
-            setDegree(res.data.message.degree)
+            setDegree(res.data.message.Program.name)
+            if (res.data.message.Program.type)
+                setDegreeType(res.data.message.Program.type)
         })
-    }, [username])
+    }, [])
     
     const form = useForm({
         initialValues: {
             username: username,
-            degree: degree
+            degree: degree,
+            degreeType: degreeType,
         }
     })
 
-    const modifyProfile = (values: {username: string, degree: string}) => {
+    // TO DO: FIX THIS
+    const modifyProfile = (values: {username: string, degree: string, degreeType: string}) => {
         axios.put(`/user/${username}`, {
             username: values.username,
-            degree: values.degree
+            degree: values.degree,
         })
         .then((res) => {
             console.log(res)
@@ -47,6 +52,7 @@ const Profile = (props: Props) => {
             }
             else {
                 setDegree(values.degree)
+                setDegreeType(values.degreeType)
             }
         })
 
@@ -73,6 +79,13 @@ const Profile = (props: Props) => {
                             placeholder={degree}
                             {...form.getInputProps('degree')}
                         />
+
+                        <TextInput
+                            label="DegreeType"
+                            placeholder={degreeType}
+                            {...form.getInputProps('degreeType')}
+                        />
+
                         {
                             errorMsg &&
                             <div>
