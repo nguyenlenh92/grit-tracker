@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import { ProfileDAO } from "../sequelize/models/Profile.Model";
+import { ProgramDAO } from "../sequelize/models/Program.Model"; 
 import { UserDAO } from "../sequelize/models/User.Model";
 import hashFN from '../utils/PasswordHashing'
 
@@ -31,6 +32,9 @@ export default class UserController {
         try {
             res.status(200).send({
                 message: await UserDAO.findOne({
+                    include: {
+                        model: ProgramDAO
+                    },
                     where: {
                         username: req.params.username
                     }
