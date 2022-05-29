@@ -9,15 +9,18 @@ export class ProfileRoutes {
         app.route('/profile/getProfileID/')
             .post(this.profileController.getProfileID)
 
-        app.route('/profile/delete/:username/:profileID')
+        app.route('/profile/:username/delete/:profileID')
             .delete(this.profileController.deleteProfile)
 
         app.route('/profile/:username')
             .get(this.profileController.getProfile)
             .post(this.profileController.createProfile)
             .put(this.profileController.updateProfile)
-            
-        app.route('/profile/unique-semester/:username')
+
+        app.route('/profile/:username/grades')
+            .get(this.profileController.getGrades)
+
+        app.route('/profile/:username/unique-semester')
             .get(this.profileController.getUniqueSemesters)
 
 

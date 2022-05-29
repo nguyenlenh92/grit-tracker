@@ -15,6 +15,13 @@ export const UserDAO = sequelize.define('User', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    firstName: {
+        type: DataTypes.STRING,
+    },
+
+    lastName: {
+        type: DataTypes.STRING,
+    },
     createdAt: {
         allowNull: false,
         type: DataTypes.DATE

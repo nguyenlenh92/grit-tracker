@@ -55,22 +55,22 @@ export default class ProfileController {
     getProfile = async (req: Request, res: Response) => {
         try {
             // FIRST SELECT JOIN STATEMENT, JOINING PROFILES TABLE WITH COURSES TABLE USING PRIMARY KEY CODE
-            res.status(200).send({
-                message: await sequelize.query(`SELECT * FROM "Profiles" JOIN "Courses" ON "Profiles".code="Courses".code WHERE "Profiles".username='${req.params.username}'`, { type: 'SELECT' })
-            });
+            // res.status(200).send({
+            //     message: await sequelize.query(`SELECT * FROM "Profiles" JOIN "Courses" ON "Profiles".code="Courses".code WHERE "Profiles".username='${req.params.username}'`, { type: 'SELECT' })
+            // });
 
             // HOW SELECT JOIN WOULD HAVE BEEN DONE USING ORM
-            // res.status(200).send({
-            //     message: await ProfileDAO.findAll({
-            //         include: [{
-            //             model: CourseDAO,
-            //         }],
-            //         where: {
-            //             username: req.params.username
-            //         }
+            res.status(200).send({
+                message: await ProfileDAO.findAll({
+                    include: [{
+                        model: CourseDAO,
+                    }],
+                    where: {
+                        username: req.params.username
+                    }
 
-            //     })
-            // });
+                })
+            });
         } catch (error) {
             res.status(500).send({
                 message: error
@@ -101,6 +101,27 @@ export default class ProfileController {
             console.error(error);
         }
     };
+
+    getGrades = async (req: Request, res: Response) => {
+        try {
+            res.status(200).send({
+                message: await ProfileDAO.findAll({
+                    where: {
+                        username: req.params.username
+                    },
+
+                    attributes: ['grade']
+
+                })
+            });
+        } catch (error) {
+            res.status(500).send({
+                message: error
+            });
+            console.error(error);
+        }
+    };
+
     updateProfile = async (req: Request, res: Response) => {
         try {
 

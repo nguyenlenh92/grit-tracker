@@ -5,7 +5,7 @@ function applyAssociations(sequelize: Sequelize) {
     // const { requirement, course, attribute, 
     //     prerequisite, corequisite, equivalence, 
     //     transfer, profile, user, administrator} = sequelize.models
-    const { Profile, Course, User, Degree, Requirement, Attribute, SatisfiesRequirement } = sequelize.models 
+    const { Profile, Course, User, Degree, Requirement, Attribute, SatisfiesRequirement, Program } = sequelize.models 
 
     Course.hasMany(Profile, { foreignKey: 'code' })
     Profile.belongsTo(Course, { foreignKey: 'code' })
@@ -13,8 +13,8 @@ function applyAssociations(sequelize: Sequelize) {
     User.hasMany(Profile, { foreignKey: 'username' })
     Profile.belongsTo(User, { foreignKey: 'username' })
 
-    Degree.hasOne(User, {foreignKey: 'degree'})
-    User.belongsTo(Degree, {foreignKey: 'degree'})
+    Program.hasOne(User, {foreignKey: 'degree'})
+    User.belongsTo(Program, {foreignKey: 'degree'})
 
     Degree.hasMany(Requirement, {foreignKey: 'degree'})
     Requirement.belongsTo(Degree, {foreignKey: 'degree'})

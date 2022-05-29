@@ -20,7 +20,7 @@ module.exports = {
 			name: Object.values(program)[0]
 		})
 	}
-
+	
 	for (const subject of subjects){
 		await queryInterface.bulkInsert('Degrees', [{
 			prefix: subject.prefix,

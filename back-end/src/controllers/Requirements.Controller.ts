@@ -36,9 +36,7 @@ export default class RequirementController {
         try {
 
             // SELECT JOIN STATEMENT DONE USING SEQUELIZE ORM
-            // const courses = await ProfileDAO.findAll({
-          /* A sequelize query that is selecting all the courses that a user has taken and the
-          attributes that the courses have. */
+            // await ProfileDAO.findAll({
             //     include: [{
             //         model: CourseDAO,
             //         as: 'Course',
@@ -54,7 +52,6 @@ export default class RequirementController {
             //     attributes: ['code', 'grade'],
             //     raw: true,
             // })
-
             // THIRD SELECT JOIN STATEMENT, JOINING PROFILE AN COURSES WITH INNER JOIN AND OUTER JOINING ATTRIBUTES WITH OUTER JOIN
             await sequelize.query(
                 `SELECT "Profiles".code, grade, credits, attribute FROM "Profiles" JOIN "Courses" ON "Profiles".code="Courses".code LEFT JOIN "Attributes" ON "Courses".code="Attributes".course WHERE "Profiles".username='${req.params.username}';`, {type: 'SELECT'})

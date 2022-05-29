@@ -14,7 +14,7 @@ require('./models/Requirement.Model'),
 require('./models/SatisfiesRequirement.Model'),
 // require('./models/Transfer.Model'),
 require('./models/User.Model')
-
+require('./models/Program.Model')
 applyAssociations(sequelize_connection)
 
 export default sequelize_connection
