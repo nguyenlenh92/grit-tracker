@@ -9,6 +9,7 @@ export class DegreeRoutes {
         app.route('/degrees/')
             .get(this.degreeController.getDegrees)
             .post(this.degreeController.createDegree)
+            
         app.route('/degrees/:prefix')
             .get(this.degreeController.getDegree)
             .put(this.degreeController.updateDegree)

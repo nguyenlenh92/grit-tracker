@@ -23,12 +23,10 @@ export class CourseRoutes {
         app.route('/courses/')
             .get(this.courseController.getCourses)
 
-        app.get('/courses', this.courseController.getCourses)
+        app.route('/courses/names')
+            .get(this.courseController.getCourseNames)
 
         app.route('/courses/:major')
             .get(this.courseController.getCoursesFromMajor)
-        
-        app.route('/coursenames/')
-            .get(this.courseController.getCourseNames)
     }   
 }
