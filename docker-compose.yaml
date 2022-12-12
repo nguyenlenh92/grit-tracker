@@ -14,9 +14,11 @@ services:
 
   database:
     container_name: database
-    image: postgres:14.2
+    build:
+      context: ./database
+      dockerfile: Dockerfile
     ports:
-      - '5432:5432'
+      - '5431:5432'
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: grit-tracker-db

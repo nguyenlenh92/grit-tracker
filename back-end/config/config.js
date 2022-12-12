@@ -6,7 +6,7 @@ module.exports = {
     "password": process.env.CI_DB_PASSWORD,
     "database": process.env.CI_DB_NAME,
     "host": "0.0.0.0",
-    "port": 5432,
+    "port": 5431,
     "dialect": "postgres"
   }
 }
