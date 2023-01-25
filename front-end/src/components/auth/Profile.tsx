@@ -43,6 +43,7 @@ const Profile = (props: Props) => {
         axios.put(`/user/${username}`, {
             username: values.username,
             degree: values.degree,
+            
         })
         .then((res) => {
             console.log(res)
